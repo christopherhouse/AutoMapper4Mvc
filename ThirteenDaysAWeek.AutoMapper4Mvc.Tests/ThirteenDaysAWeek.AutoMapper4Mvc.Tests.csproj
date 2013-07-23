@@ -92,6 +92,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ActionFilters\Http\AutoMapAttributeTests.cs" />
+    <Compile Include="ActionFilters\Mvc\AutoMapAttributeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,9 +101,7 @@
       <Name>ThirteenDaysAWeek.AutoMapper4Mvc</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ActionFilters\Mvc\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
