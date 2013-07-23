@@ -8,7 +8,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Tests.ActionFilters.Http
     public class AutoMapAttributeTests
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void Constructor_Should_Throw_ArgumentNullException_If_SourceType_Is_Null()
         {
             // Arrange
@@ -39,22 +39,28 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Tests.ActionFilters.Http
         public void Constructor_Should_Set_SourceType_Property()
         {
             // Arrange
+            Type sourceType = typeof (int);
+            Type destinationType = typeof (string);
 
             // Act
+            AutoMapAttribute attribute = new AutoMapAttribute(sourceType, destinationType);
 
             // Assert
-            Assert.Fail();
+            Assert.AreEqual(sourceType, attribute.SourceType);
         }
 
         [TestMethod()]
         public void Constructor_Should_Set_DestinationType_Property()
         {
             // Arrange
+            Type sourceType = typeof (int);
+            Type destinationType = typeof (string);
 
             // Act
+            AutoMapAttribute attribute = new AutoMapAttribute(sourceType, destinationType);
 
             // Assert
-            Assert.Fail();
+            Assert.AreEqual(destinationType, attribute.DestinationType);
         }
     }
 }

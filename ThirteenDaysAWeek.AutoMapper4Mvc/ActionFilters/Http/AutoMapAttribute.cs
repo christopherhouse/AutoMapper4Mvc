@@ -17,6 +17,10 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.ActionFilters.Http
             {
                 throw new ArgumentNullException("destinationType");
             }
+
+            SourceType = sourceType;
+
+            DestinationType = destinationType;
         }
 
         public Type SourceType { get; private set; }
