@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ThirteenDaysAWeek.AutoMapper4Mvc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("AutoMapper4Mvc")]
+[assembly: AssemblyDescription("Attributes for executing AutoMapper after MVC and Web API actions")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Christopher House")]
 [assembly: AssemblyProduct("ThirteenDaysAWeek.AutoMapper4Mvc")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
