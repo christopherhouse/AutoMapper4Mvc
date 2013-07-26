@@ -26,5 +26,13 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.ActionFilters.Mvc
         public Type SourceType { get; private set; }
 
         public Type DestinationType { get; private set; }
+
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            object model = filterContext.Controller.ViewData.Model;
+            object viewModel = AutoMapper.Mapper.Map(model, SourceType, DestinationType);
+
+            filterContext.Controller.ViewData.Model = viewModel;
+        }
     }
 }

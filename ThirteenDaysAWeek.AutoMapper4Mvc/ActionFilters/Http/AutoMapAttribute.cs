@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http.Filters;
 
 namespace ThirteenDaysAWeek.AutoMapper4Mvc.ActionFilters.Http
@@ -26,5 +28,21 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.ActionFilters.Http
         public Type SourceType { get; private set; }
 
         public Type DestinationType { get; private set; }
+
+        public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
+        {
+            if (actionExecutedContext.Exception == null && actionExecutedContext.Response.StatusCode == HttpStatusCode.OK)
+            {
+                if (!(actionExecutedContext.Response.Content is ObjectContent))
+                {
+                    throw new InvalidOperationException("AutoMapAttribute can only operate on messages with an ObjectContent respose");
+                }
+
+                ObjectContent response = actionExecutedContext.Response.Content as ObjectContent;
+
+                object output = AutoMapper.Mapper.Map(response.Value, SourceType, DestinationType);
+                actionExecutedContext.Response = actionExecutedContext.Request.CreateResponse(actionExecutedContext.Response.StatusCode, output);
+            }
+        }
     }
 }
