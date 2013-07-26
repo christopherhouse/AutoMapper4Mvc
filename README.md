@@ -10,31 +10,31 @@ on AutoMapper.
 
 ###MVC
 
-public class HomeController : Controller
-{
-  private readonly IProductService _productService;
-  
-  [AutoMap(typeof(ProductCollection), typeof(ProductListViewModel))]
-  public ActionResult Index()
-  {
-	return View(_productService.GetProductList());
-  }
-}
+    public class HomeController : Controller
+    {
+      private readonly IProductService _productService;
+      
+      [AutoMap(typeof(ProductCollection), typeof(ProductListViewModel))]
+      public ActionResult Index()
+      {
+	    return View(_productService.GetProductList());
+      }
+    }
 
 In the above example, the view for this controller action would receive a model
 of type ProductListViewModel
 
 ###Web API
 
-public class ProductsController : ApiController
-{
-  private readonly IProductService _productService;
-  
-  [AutoMap(typeof(ProductCollection), typeof(List<Product>))]
-  public ProductCollection Get()
-  {
-    return _productService.GetProductList();
-  }
-}
+    public class ProductsController : ApiController
+    {
+      private readonly IProductService _productService;
+      
+      [AutoMap(typeof(ProductCollection), typeof(List<Product>))]
+      public ProductCollection Get()
+      {
+        return _productService.GetProductList();
+      }
+    }
 
 In this example, a client that calls /products would receive a List<Product> response.
