@@ -31,7 +31,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.ActionFilters.Http
 
         public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
         {
-            if (actionExecutedContext.Exception == null && actionExecutedContext.Response.StatusCode == HttpStatusCode.OK)
+            if (actionExecutedContext.Exception == null)
             {
                 if (!(actionExecutedContext.Response.Content is ObjectContent))
                 {
