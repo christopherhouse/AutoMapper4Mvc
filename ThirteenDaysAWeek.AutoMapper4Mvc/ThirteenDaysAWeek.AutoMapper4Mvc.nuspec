@@ -15,4 +15,7 @@
     <copyright>Copyright 2013</copyright>
     <tags>AutoMapper MVC WebAPI</tags>
   </metadata>
+  <files>
+    <file src="README.txt" target="" />
+  </files>
 </package>
