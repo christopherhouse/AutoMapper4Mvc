@@ -11,7 +11,7 @@
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>The Web API AutoMap attribute no longer checks for Response.StatusCode == HttpStatusCode.200.  New behavior is to check only for actionExecutedContext.Exception == null</releaseNotes>
+    <releaseNotes>Introduced ProfileLoader class to load any AutoMapper profiles found in web app assembly or any assemblies referenced by the web app</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>AutoMapper MVC WebAPI</tags>
   </metadata>
