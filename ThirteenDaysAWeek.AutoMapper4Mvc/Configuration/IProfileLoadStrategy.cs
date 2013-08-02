@@ -7,12 +7,4 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
     {
         IEnumerable<Assembly> GetAssembliesToScan();
     }
-
-    public class AllLoadedAssembliesStrategy : IProfileLoadStrategy
-    {
-        public IEnumerable<Assembly> GetAssembliesToScan()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }

@@ -85,12 +85,18 @@
   <ItemGroup>
     <Compile Include="ActionFilters\Http\AutoMapAttribute.cs" />
     <Compile Include="ActionFilters\Mvc\AutoMapAttribute.cs" />
+    <Compile Include="Configuration\AllLoadedAssembliesStrategy.cs" />
+    <Compile Include="Configuration\AssemblyListLoadStrategy.cs" />
+    <Compile Include="Configuration\IProfileLoadStrategy.cs" />
     <Compile Include="Configuration\ProfileLoader.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="ThirteenDaysAWeek.AutoMapper4Mvc.nuspec" />
+    <None Include="ThirteenDaysAWeek.AutoMapper4Mvc.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />

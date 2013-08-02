@@ -30,10 +30,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
             IEnumerable<Assembly> assembliesToScan = loadStrategy.GetAssembliesToScan();
             IEnumerable<Type> profiles = GetProfileTypes(assembliesToScan);
 
-            Mapper.Initialize(configuration =>
-                {
-                    profiles.ForEach(type => configuration.AddProfile((Profile) Activator.CreateInstance(type)));
-                });
+            Mapper.Initialize(configuration => profiles.ForEach(type => configuration.AddProfile((Profile) Activator.CreateInstance(type))));
         }
 
         private static IEnumerable<Type> GetProfileTypes(IEnumerable<Assembly> assembliesToScan)
