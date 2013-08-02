@@ -24,5 +24,26 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
                     }
                 });
         }
+
+        public static void LoadProfiles(IProfileLoadStrategy loadStrategy)
+        {
+            IEnumerable<Assembly> assembliesToScan = loadStrategy.GetAssembliesToScan();
+            IEnumerable<Type> profiles = GetProfileTypes(assembliesToScan);
+
+            Mapper.Initialize(configuration =>
+                {
+                    profiles.ForEach(type => configuration.AddProfile((Profile) Activator.CreateInstance(type)));
+                });
+        }
+
+        private static IEnumerable<Type> GetProfileTypes(IEnumerable<Assembly> assembliesToScan)
+        {
+            Type profileType = typeof (Profile);
+
+            IEnumerable<Type> profiles = assembliesToScan.SelectMany(assembly => assembly.GetTypes())
+                .Where(type => profileType.IsAssignableFrom(type) && !type.IsAbstract && type != profileType);
+
+            return profiles;
+        }
     }
 }
