@@ -6,8 +6,17 @@ using AutoMapper;
 
 namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
 {
+    /// <summary>
+    /// Contains methods for initializing AutoMapper configuration via profiles contained in referenced
+    /// assemblies
+    /// </summary>
     public static class ProfileLoader
     {
+        /// <summary>
+        /// Scans all loaded assemblies and initializes AutoMapper with any classes that inherit from
+        /// AutoMapper.Profile
+        /// </summary>
+        [Obsolete("LoadProfiles is obsolete, use LoadProfiles(IProfileStrategy loadStrategy) instead")]
         public static void LoadProfiles()
         {
             Assembly[] assembliesToScan = AppDomain.CurrentDomain.GetAssemblies();
@@ -25,6 +34,11 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
                 });
         }
 
+        /// <summary>
+        /// Scans all assemblies returned by the provided IProfileLoadStrategy and configures
+        /// AutoMapper with any profiles found in the specified assemblies
+        /// </summary>
+        /// <param name="loadStrategy">An IProfileLoadStrategy implementation that returns a list of assemblies to scan</param>
         public static void LoadProfiles(IProfileLoadStrategy loadStrategy)
         {
             IEnumerable<Assembly> assembliesToScan = loadStrategy.GetAssembliesToScan();
