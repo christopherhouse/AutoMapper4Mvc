@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ThirteenDaysAWeek.AutoMapper4Mvc.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ThirteenDaysAWeek.AutoMapper4Mvc.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
@@ -89,6 +91,7 @@
     <Compile Include="Configuration\AssemblyListLoadStrategy.cs" />
     <Compile Include="Configuration\IProfileLoadStrategy.cs" />
     <Compile Include="Configuration\ProfileLoader.cs" />
+    <Compile Include="Configuration\RegexMatchAssemblyLoadStrategy.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

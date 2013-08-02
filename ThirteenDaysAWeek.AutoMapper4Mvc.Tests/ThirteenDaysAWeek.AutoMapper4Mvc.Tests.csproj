@@ -93,6 +93,8 @@
   <ItemGroup>
     <Compile Include="ActionFilters\Http\AutoMapAttributeTests.cs" />
     <Compile Include="ActionFilters\Mvc\AutoMapAttributeTests.cs" />
+    <Compile Include="Configuration\AssemblyListLoadStrategyTests.cs" />
+    <Compile Include="Configuration\ProfileLoaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
