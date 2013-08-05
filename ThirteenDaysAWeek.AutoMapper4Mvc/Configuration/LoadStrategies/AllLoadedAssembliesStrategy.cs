@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
+namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.LoadStrategies
 {
     /// <summary>
     /// AllLoadedAssembliesStrategy is an IProfileLoadStrategy implementation that returns

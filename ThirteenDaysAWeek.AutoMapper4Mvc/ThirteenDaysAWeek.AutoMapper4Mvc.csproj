@@ -87,11 +87,11 @@
   <ItemGroup>
     <Compile Include="ActionFilters\Http\AutoMapAttribute.cs" />
     <Compile Include="ActionFilters\Mvc\AutoMapAttribute.cs" />
-    <Compile Include="Configuration\AllLoadedAssembliesStrategy.cs" />
-    <Compile Include="Configuration\AssemblyListLoadStrategy.cs" />
-    <Compile Include="Configuration\IProfileLoadStrategy.cs" />
+    <Compile Include="Configuration\LoadStrategies\AllLoadedAssembliesStrategy.cs" />
+    <Compile Include="Configuration\LoadStrategies\AssemblyListLoadStrategy.cs" />
+    <Compile Include="Configuration\LoadStrategies\IProfileLoadStrategy.cs" />
     <Compile Include="Configuration\ProfileLoader.cs" />
-    <Compile Include="Configuration\RegexMatchAssemblyLoadStrategy.cs" />
+    <Compile Include="Configuration\LoadStrategies\RegexMatchAssemblyLoadStrategy.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

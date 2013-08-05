@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
+namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.LoadStrategies
 {
     /// <summary>
     /// RegexMatchAssemblyLoadStrategy is an IProfileLoadStrategy implementation that
