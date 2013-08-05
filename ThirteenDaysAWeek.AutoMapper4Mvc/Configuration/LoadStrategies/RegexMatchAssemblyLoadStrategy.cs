@@ -11,7 +11,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.LoadStrategies
     /// </summary>
     public class RegexMatchAssemblyLoadStrategy : IProfileLoadStrategy
     {
-        private readonly List<Assembly> assemblies = new List<Assembly>();
+        private readonly List<Assembly> _assemblies = new List<Assembly>();
 
         /// <summary>
         /// Creates an instance of the class and sets the regex that will be used
@@ -29,7 +29,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.LoadStrategies
         /// <returns>A list of assemblies to scan for AutoMapper profiles</returns>
         public IEnumerable<Assembly> GetAssembliesToScan()
         {
-            return assemblies;
+            return _assemblies;
         }
 
         private void AddMatchingAssemblies(string assemblyMatchRegex)
@@ -42,7 +42,7 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.LoadStrategies
                 {
                     if (regex.IsMatch(assembly.FullName))
                     {
-                        assemblies.Add(assembly);
+                        _assemblies.Add(assembly);
                     }
                 });
         }
