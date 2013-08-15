@@ -17,6 +17,10 @@ namespace ThirteenDaysAWeek.AutoMapper4Mvc.Configuration
         /// Scans all loaded assemblies and initializes AutoMapper with any classes that inherit from
         /// AutoMapper.Profile
         /// </summary>
+        /// <remarks>
+        /// This method is equivalent to calling LoadProfiles(IProfileLoadStrategy loadStrategy) and passing
+        /// in an instance of AllLoadedAssembliesStrategy
+        /// </remarks>
         [Obsolete("LoadProfiles is obsolete, use LoadProfiles(IProfileStrategy loadStrategy) instead")]
         public static void LoadProfiles()
         {

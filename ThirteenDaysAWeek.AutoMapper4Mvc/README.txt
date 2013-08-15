@@ -10,8 +10,15 @@ capability allows you to keep dependencies on AutoMapper and mapping code out of
 
 Profile Loader
 
-AutoMapper4Mvc contains a status method, LoadProfiles that will scan all assemblies loaded by your web application and will configure
-AutoMapper with any AutoMapper profiles found in those assemblies.
+The ProfileLoader class contains a couple of methods that are useful for declaratively loading AutoMapepr profiles in your MVC application.
+ProfileLoader.LoadProfiles is a static method that accepts an instance of a class that implements IProfileLoadStrategy.  AutoMapepr4Mvc contains
+a couple of implementations of IProfileLoadStrategy:
+
+	AllLoadedAssembliesStrategy - this class loads profiles in all currently loaded assemblies
+
+	AssemblyListLoadStrategy - this class allows you to pass a list of specific assemblies that should be scanned for profiles
+
+	RegexMatchAssemblyLoadStrategy - this class accepts a regex string that is used to match assembly names.  Matching assemblies will be scanned profiles
 
 Examples
 
