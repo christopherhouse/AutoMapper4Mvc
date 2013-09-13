@@ -51,7 +51,7 @@ In this example, a client that calls /products would receive a List<Product> res
 	  protected void Application_Start()
 	  {
 	    // Other code ommited
-		ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.ProfileLoader.LoadProfiles();
+		ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.ProfileLoader.LoadProfiles(new AllLoadedAssembliesStrategy());
 	  }
 	}
 

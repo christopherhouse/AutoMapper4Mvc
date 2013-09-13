@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A9B793
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirteenDaysAWeek.AutoMapper4Mvc.Tests", "ThirteenDaysAWeek.AutoMapper4Mvc.Tests\ThirteenDaysAWeek.AutoMapper4Mvc.Tests.csproj", "{19E8A93B-B993-41FA-806A-4F59BBEC672D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{235B23BB-84BE-41CE-8362-4D5C372FF28B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
