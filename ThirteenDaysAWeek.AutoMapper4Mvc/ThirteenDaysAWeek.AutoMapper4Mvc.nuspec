@@ -8,10 +8,9 @@
     <owners>$author$</owners>
     <licenseUrl>https://github.com/13daysaweek/AutoMapper4Mvc/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/13daysaweek/AutoMapper4Mvc</projectUrl>
-    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Introduced ProfileLoader class to load any AutoMapper profiles found in web app assembly or any assemblies referenced by the web app</releaseNotes>
+    <releaseNotes>Introduced concept of profile load strategies to allow control over where ProfileLoader loads AutoMapper profiles from</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>AutoMapper MVC WebAPI</tags>
   </metadata>

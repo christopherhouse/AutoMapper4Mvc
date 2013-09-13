@@ -60,7 +60,7 @@ Profile Loader
 	  protected void Application_Start()
 	  {
 	    // Other code ommited
-		ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.ProfileLoader.LoadProfiles();
+		ThirteenDaysAWeek.AutoMapper4Mvc.Configuration.ProfileLoader.LoadProfiles(new AllLoadedAssembliesStrategy());
 	  }
 	}
 
